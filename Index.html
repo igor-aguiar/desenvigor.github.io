@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassi PDF Creator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 0;
+        }
+
+        .button-grid button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .selected {
+            text-decoration: none;
+            background-color: rgb(102, 238, 102);
+            color: white;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Selecione as datas</h2>
+    <div class="button-grid">
+        <!-- Botões de 1 a 31 -->
+        <!-- Você também pode gerar isso via JS se quiser mais dinâmico -->
+        <script>
+            for (let i = 1; i <= 31; i++) {
+                document.write(`<button class="date" id=${i}>${i}</button>`);
+            }
+        </script>
+    </div>
+    <div  style="margin: 15px 0">
+        <label for="mes">Selecione o mês:</label>
+        <input type="month" id="mes" name="mes">
+    </div>
+
+    <button id="gerarPdf">Gerar Recibo</button>
+    <button id="gerarFrequencia">Gerar Frequencia</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
