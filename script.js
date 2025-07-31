@@ -74,7 +74,7 @@ document.getElementById('gerarPdf').addEventListener('click', () => {
 
   const titulo = ("RECIBO");
   const subTitulo = ("ATENDIMENTO TERAPÊUTICO - AT ESCOLAR - DIR FLOORTIME");
-  const corpo = ("Eu, ELISSANDRA ELAYNE MARTINS DOS SANTOS RAMOS, inscrita sob o CPF 070.365.384-90, declaro que recebi da CASSI JOÃO PESSOA - CNPJ 33.719.485/0023-32 - Av. Júlia Freire, 1200, Edifício Metropolitan, 7º andar, Bairro Expedicionários, João Pessoa (PB), CEP 58.041-000, a importância de R$ " + valorAulas + " (" + valorAulasExtenso + "), sendo " + numeroTotalAulas + " sessões, duas sessões por dia com valor Unitário de R$ 100,00, referente ao procedimento de Atendimento Terapêutico - (DIR FLOORTIME) ao menor VINICIUS PESSOA OLIVEIRA ORTINS inscrito sob o CPF 119.197.084-13, nos dias " + Array.from(datasAulas).map(dataAula => dataAula.innerHTML).join(', ') + " de " + mesAnoAulaRecibo + ".");
+  const corpo = ("Eu, ELISSANDRA ELAYNE MARTINS DOS SANTOS RAMOS, inscrita sob o CPF 070.365.384-90, declaro que recebi da CASSI JOÃO PESSOA - CNPJ 33.719.485/0023-32 - Av. Júlia Freire, 1200, Edifício Metropolitan, 7º andar, Bairro Expedicionários, João Pessoa (PB), CEP 58.041-000, a importância de R$ " + valorAulas + ",00 (" + valorAulasExtenso + "), sendo " + numeroTotalAulas + " sessões, duas sessões por dia com valor Unitário de R$ 100,00, referente ao procedimento de Atendimento Terapêutico - (DIR FLOORTIME) ao menor VINICIUS PESSOA OLIVEIRA ORTINS inscrito sob o CPF 119.197.084-13, nos dias " + Array.from(datasAulas).map(dataAula => dataAula.innerHTML).join(', ') + " de " + mesAnoAulaRecibo + ".");
 
   const conteudoHTML = `
         <!DOCTYPE html>
