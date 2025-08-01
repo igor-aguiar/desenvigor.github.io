@@ -60,7 +60,7 @@ document.getElementById('gerarPdf').addEventListener('click', () => {
 
   // Adiciona um dia fictício (ex: dia 1) para que seja uma data válida
   const data = new Date(mesAnoAulas + "-10");
-  console.log(data.getUTCMonth() + "/" + data.getFullYear())
+  const ultimoDiaDoMes = new Date(data.getFullYear(), data.getMonth() + 1, 0);
 
   // Formata no estilo "Fevereiro de 2025"
   const formatador = new Intl.DateTimeFormat("pt-BR", {
@@ -185,6 +185,7 @@ document.getElementById('gerarFrequencia').addEventListener('click', () => {
   var contador = 1;
   // Adiciona um dia fictício (ex: dia 1) para que seja uma data válida
   const data = new Date(mesAnoAulas + "-10");
+  const ultimoDiaDoMes = new Date(data.getFullYear(), data.getMonth() + 1, 0);
 
   // Formata no estilo "Fevereiro de 2025"
   const formatador = new Intl.DateTimeFormat("pt-BR", {
@@ -322,8 +323,8 @@ document.getElementById('gerarFrequencia').addEventListener('click', () => {
                   <td></td></tr>`;
                 return linha1 + linha2;
               }).join('')}
-            </table>
-            <p class=dataAssinatura>João Pessoa, 30 de ${formatador.format(data)} de ${formatadorAno.format(data)}</p>
+            </table> 
+            <p class=dataAssinatura>João Pessoa, ${ultimoDiaDoMes.getDate()} de ${formatador.format(data)} de ${formatadorAno.format(data)}</p>
             <div style="width: 80%; margin: 60px auto 20px auto; text-align: center;">
               <hr style="border: none; border-bottom: 1px solid #000;">
               <p style="margin-top: 5px;">Elissandra Elayne Martins dos Santos Ramos / CPF 070.365.384-90</p>
