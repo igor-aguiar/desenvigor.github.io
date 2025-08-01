@@ -312,11 +312,11 @@ document.getElementById('gerarFrequencia').addEventListener('click', () => {
                 <td>ASSINATURA RESPONSÁVEL</td>
               </thead>
               ${Array.from(datasAulas).map(dataAula => {
-                  const linha1 = `<tr><td>${contador++}ª ${dataAula.innerHTML}/${data.getMonth()}/${data.getFullYear()}</td>
+                  const linha1 = `<tr><td>${contador++}ª ${dataAula.innerHTML}/${String(data.getMonth() + 1).padStart(2, '0')}/${data.getFullYear()}</td>
                   <td>08:00 às 09:00</td>
                   <td>R$ 100,00</td>
                   <td></td></tr>`;
-                  const linha2 = `<tr><td>${contador++}ª ${dataAula.innerHTML}/${data.getMonth()}/${data.getFullYear()}</td>
+                  const linha2 = `<tr><td>${contador++}ª ${dataAula.innerHTML}/${String(data.getMonth() + 1).padStart(2, '0')}/${data.getFullYear()}</td>
                   <td>09:00 às 10:00</td>
                   <td>R$ 100,00</td>
                   <td></td></tr>`;
